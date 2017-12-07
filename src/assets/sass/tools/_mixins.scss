@@ -80,3 +80,42 @@
 	display: -webkit-flex;
 	display: flex;
 }
+@mixin twoColumnHeaderFooter {
+	// .wrapper{
+		display: grid; 
+		grid-template-columns: repeat(12, 1fr);
+		grid-template-rows: auto 1fr auto;
+		// grid-template-rows: 50px 350px 50px;
+		grid-gap: 5px;
+		grid-template-areas:
+		"h h h h h h h h h h h h"
+		"m m c c c c c c c c c c"
+		"f f f f f f f f f f f f";
+		
+		.header {
+			grid-area: h;
+			height:4rem;
+		}
+		.menu {
+			grid-area: m;
+		}
+		.content {
+			grid-area: c;
+		}
+		.footer {
+		   grid-area: f;
+		   height:3rem;
+		}
+	// }
+	@media only screen and (max-width: 600px)  {
+		// .wrapper {
+			grid-template-rows: auto 6rem 1fr auto;
+			grid-template-areas:
+			"h h h h h h h h h h h h" 
+			"m m m m m m m m m m m m"
+			"c c c c c c c c c c c c"
+			"f f f f f f f f f f f f";
+		// }
+	}
+	
+}

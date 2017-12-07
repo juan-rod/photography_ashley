@@ -12,7 +12,7 @@
 <script>
 import NavBar from '../../components/nav/Navigation.vue'
 export default {
-  name: 'HomeView',
+  name: 'HomePage',
   components: { NavBar },
   data () {
     return {
