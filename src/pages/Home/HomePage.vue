@@ -1,11 +1,14 @@
 <template>
-  <div>
+<div>
     <div class="wrapper border">
         <nav-bar class="header border4">HEADER Here</nav-bar>
-        <div class="menu border2">MENU</div>
-        <div class="content border3">CONTENT</div>
+        <!-- <div class="menu border2">MENU</div> -->
+        <div class="content border3">
+          <router-view/>
+        </div>
         <div class="footer border4">FOOTER</div>
     </div>
+
   </div>
 </template>
 
