@@ -22,6 +22,7 @@ let config = {
   messagingSenderId: '283199032451'
 }
 firebase.initializeApp(config)
+window.firebase = firebase
 
 router.beforeEach((to, from, next) => {
   if (to.meta.auth) {

@@ -1,8 +1,7 @@
 <template>
 <div>
     <div class="wrapper border">
-        <nav-bar class="header border4">HEADER Here</nav-bar>
-        <!-- <div class="menu border2">MENU</div> -->
+        <nav-bar class="header border4"></nav-bar>
         <div class="content border3">
           <router-view/>
         </div>
