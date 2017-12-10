@@ -37,6 +37,7 @@
   </div>
 </template>
 <script>
+import { mapGetters } from 'vuex'
 import * as firebase from 'firebase'
 export default {
   name: 'Admin-Login',
@@ -46,13 +47,21 @@ export default {
       password: ''
     }
   },
+  computed: {
+    ...mapGetters([
+      'isAuth'
+    ])
+  },
   methods: {
     login () {
       console.log('hello from loging')
       firebase.auth().signInWithEmailAndPassword(this.email, this.password)
-        .then((user) => {
-          this.$store.dispatch('setUser', user)
-          this.$router.go('/admin')
+        .then((response) => {
+          console.log('response:', response)
+          this.$store.dispatch('setAuth', true)
+          console.log('this.isAuth:', this.isAuth)
+          this.$store.dispatch('setUser', response.email)
+          this.$router.push('/admin')
         }).catch((error) => {
           console.log('error:', error)
         })

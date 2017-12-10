@@ -17,6 +17,9 @@ const getters = {
 const actions = {
   setUser ({ commit }, user) {
     commit('SET_USER', user)
+  },
+  setAuth ({ commit }, data) {
+    commit('SET_AUTH', data)
   }
 }
 

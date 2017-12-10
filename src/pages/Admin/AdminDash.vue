@@ -1,23 +1,15 @@
 <template>
   <div>
-      <h1>hello from AdminDash</h1>
-
-        <!-- <form class="login" action="" method="post"> 
-            
-            <div><label for="username">Username</label>
-            <input type="text" name="username" id="username"></div>
-            <div><label for="password">Password</label>
-            <input type="password" name="password" id="password"></div>
-            
-            <div class="actions">
-            <input type="submit" name="login" value="Login"> <a href="/forgot">I forgot my password</a>
-            </div>
-        </form> -->
-
-        <!-- <div class="account">
-        <p>Create a new account <a href="">here</a>.</p>
-        </div> -->
-
+    <nav class="font-sans flex flex-col text-center sm:flex-row sm:text-left sm:justify-between py-4 px-6 bg-white shadow sm:items-baseline w-full">
+        <div class="mb-2 sm:mb-0">
+            <a href="/home" class="text-2xl no-underline text-grey-darkest hover:text-blue-dark">hello from AdminDash</a>
+        </div>
+        <div>
+            <a href="/one" class="text-lg no-underline text-grey-darkest hover:text-blue-dark ml-2">One</a>
+            <a href="/two" class="text-lg no-underline text-grey-darkest hover:text-blue-dark ml-2">Two</a>
+            <a href="/three" class="text-lg no-underline text-grey-darkest hover:text-blue-dark ml-2">Three</a>
+        </div>
+    </nav>
   </div>
 </template>
 <script>
